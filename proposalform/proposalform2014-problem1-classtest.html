@@ -1,0 +1,1276 @@
+<!DOCTYPE html> 
+<!--html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="keywords" content="accessibility, universal design, 
+alternate format, web design, disability, higher education, ADA, Section 508,
+accommodations, assistifve technology, DOJ, Department of Justice, WAI" />
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+<title>Speaker Proposal Form 2014 | Accessing Higher Ground</title>
+
+
+<!--  link href="a11yaccordeon/css/a11yAccordeon.css" rel="stylesheet" type="text/css" media="screen" /-->
+<link href="css/ahg_scrn_wform_atlas.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+
+<!-- enable HTML 5 elements in IE7&8 -->
+<!--[if lt IE 9]>
+   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+   
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" media="all" href="http://accessinghigherground.org/wp/wp-content/themes/AHG/css/ahg_scrn_ie_style4ahead-wform-4wp.css" />
+   <![endif]-->
+
+<!-- js & other assets for accessible accordion -->
+<script src="js/a11yAccordeon-0.2.2.min.js"></script>
+<!--jQuery Library --> 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	// validate signup form on keyup and submit
+	var validator = $("#proposal2014").validate({
+		rules: {
+			fstspkr1: {
+				required: true,
+				minlength: 2
+			},
+			lstname1: {
+				required: true,
+				minlength: 2
+			},
+			spkrtitle1: {
+				required: false,
+				maxlength: 40
+			},
+			company1: {
+				required: true,
+				minlength: 3,
+				maxlength: 25
+			},
+			department1: {
+				required: false,
+				minlength: 3,
+				maxlength: 25
+			},
+			address1: {
+				required: true,
+				minlength: 3,
+				maxlength: 30
+			},
+			city1: {
+				required: true,
+				minlength: 3,
+				maxlength: 25
+			},
+			state1: {
+				required: true,
+				minlength: 2,
+				maxlength: 25
+			},
+			country1: {
+				required: true
+			},
+			zip1: {
+				required: true,
+				minlength: 4,
+				maxlength: 12
+			},
+			telno1: {
+				required: true,
+				minlength: 10
+			},	
+			proptitle: {
+				required: true,
+				minlength: 10,
+				maxlength: 150
+			},
+			PresentationSummary: {
+				required: true,
+				minlength: 20,
+				maxlength: 300
+			},
+			PresentationAbstract: {
+				required: true,
+				minlength: 20,
+				maxlength: 860
+			},
+			KeyPoint1: {
+				required: true,
+				minlength: 10,
+				maxlength: 110
+			},
+			KeyPoint2: {
+				required: true,
+				minlength: 10,
+				maxlength: 110
+			},
+			KeyPoint3: {
+				required: true,
+				minlength: 10,
+				maxlength: 110
+			},
+			ExpertiseLevel: {
+				required: true
+			},
+			leclab: {
+				required: true
+			},
+			los: {
+				required: true
+			},
+			Speaker1sig: {
+				required: true
+			},
+			PaperInclude: {
+				required: true
+			},
+			consentaudio: {
+				required: true
+			},
+			videorecord: {
+				required: true
+			},
+			videostream: {
+				required: true
+			}
+			
+		},
+		messages: {
+			fstspkr1: {
+				required: "Your first name is required!",
+				minlength: jQuery.format("Your first name needs to be at least {0} characters")
+			},
+			lstname1: {
+				required: "Your last name is required!",
+				minlength: jQuery.format("Your last name needs to be at least {0} characters")
+			},
+			company1: {
+				required: "Your company or affiliation is required!",
+				minlength: jQuery.format("Your company/affiliation needs to be at least {0} characters")
+			},
+			address1: {
+				required: "Your address is required!",
+				minlength: jQuery.format("Enter at least {0} characters")
+			},
+			city1: {
+				required: "Your city is required!",
+				minlength: jQuery.format("Enter at least {0} characters")
+			},
+			state1: {
+				required: "Your state or region is required!",
+				minlength: jQuery.format("Enter at least {0} characters")
+			},
+			country1: {
+				required: "Please select your country!"
+			},
+			zip1: {
+				required: "A zip or postal code is required!",
+				minlength: jQuery.format("Enter at least {0} characters")
+			},
+			telno1: {
+				required: "A phone number is required!",
+				minlength: jQuery.format("Enter at least {0} characters")
+			},
+			proptitle: {
+				required: "A proposal title is required!",
+				minlength: jQuery.format("Enter at least {0} characters"),
+				maxlength: jQuery.format("Maximum length is {0} characters")
+			},
+			PresentationSummary: {
+				required: "A presentation summary is required!",
+				minlength: jQuery.format("Enter at least {0} characters"),
+				maxlength: jQuery.format("Maximum length is {0} characters")
+			},
+			PresentationAbstract: {
+				required: "A presentation abstract is required!",
+				minlength: jQuery.format("Enter at least {0} characters"),
+				maxlength: jQuery.format("Maximum length is {0} characters")
+			},
+			KeyPoint1: {
+				required: "3 keypoints are required!",
+				minlength: jQuery.format("Enter at least {0} characters"),
+				maxlength: jQuery.format("Maximum length is {0} characters")
+			},
+			KeyPoint2: {
+				required: "3 keypoints are required!",
+				minlength: jQuery.format("Enter at least {0} characters"),
+				maxlength: jQuery.format("Maximum length is {0} characters")
+			},
+			KeyPoint3: {
+				required: "3 keypoints are required!",
+				minlength: jQuery.format("Enter at least {0} characters"),
+				maxlength: jQuery.format("Maximum length is {0} characters")
+			},
+			ExpertiseLevel: {
+				required: "An expert level entry is required!"
+			},
+			leclab: {
+				required: "Select lecture or lab!"
+			},
+			los: {
+				required: "Select length of session!"
+			},
+			Speaker1sig: {
+				required: "Please type your name in lieu of signature!"
+			},
+			PaperInclude: {
+				required: "Please select yes or no!"
+			},
+			consentaudio: {
+				required: "Please select yes or no!"
+			},
+			videorecord: {
+				required: "Please select yes or no!"
+			},
+			videostream: {
+				required: "Please select yes or no!"
+			}		
+		},
+		// set this class to error-labels to indicate valid fields
+		success: function(label) {
+			// set &nbsp; as text for IE
+			label.addClass("checked");
+		},
+		errorPlacement: function(error, element) {
+        error.appendTo("label[for="+$(element).attr('id')+"]");
+        },
+        errorElement: "em"
+
+	});
+
+});
+
+</script>
+
+
+</head>
+
+<body onload="load();">
+<script type="text/javascript">
+var load = function () {
+var myAccordeon = a11yAccordeon({
+  parentSelector: '#Accordeon1',
+  showSearch: false,
+  hiddenLinkDescription: "select to expand",
+});
+$("a.a11yAccordeonItemHeaderLink").click(function(){				 
+   $("#secondspeak").attr("role", "alert");
+   document.getElementById("secondspkr").focus();
+  });
+
+};
+</script>
+
+
+
+<div id="skip">
+  <ul>
+    <li><a href="#formstart" title="Skip All Naviagtion">Skip to Main Content</a></li>
+
+    <li><a href="#container2"  title="Skip to Section Naviagtion">Skip to Section Navigation</a></li>
+  </ul>
+</div>
+<div id="centerall">
+  <div id="AHEADbanner">
+    <ul id="AHEADTopLogo">
+      <li><a href="http://www.ahead.org/"><img src="http://accessinghigherground.org/images/AHEADlogo_forweb.jpg" alt="AHEAD logo" width="222" height="41" /></a></li>
+</ul>
+<ul id="startAHEADNav">
+<li><img src="http://accessinghigherground.org/images/The_Missing_Piece2.jpg" alt="" width="35" height="39" /></li>
+
+    </ul>
+  </div>
+  <div id="outterContainer">
+
+    <div id="banner"> <img src="http://accessinghigherground.org/images/global/banner_graphic2.jpg" alt="AHG speaker giving presentation" width="935" height="212" id="siteImage" /> 
+      <div> 
+        <h1>17th Annual Accessing Higher Ground</h1>
+        <h2>Accessible Media, Web and Technology Conference</h2>
+        <h2>November 11 - 17, 2014</h2><br />
+        
+          <span><a href="../registration2014.html#jlist">Join our mailing 
+          list</a></span> <span>The Official Conference of <abbr title="Access Technologists Higher Education Network"><a href="../atheninfo2013.html">ATHEN</a></abbr></span>
+      </div>
+    </div>
+    <div id="container">
+      <div id="container2">
+	  
+        <div id="navigation">
+          <ul>
+
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about2014.html">About <abbr title="accessing higher ground conference">AHG</abbr></a>
+            </li>
+            <li><a href="../speaker_info2014.html">Call for Papers</a> 
+            <ul class="here">
+                <li><a href="proposalform2014.php">Proposal Form</a></li>
+                <li><a href="../propinfo.html">Preparing Form</a></li> 
+                <li><a href="access_proposals_4speakers2014.php">Viewing Proposals</a></li>
+               </ul>
+            </li>
+            <li><a href="../recordedAHG2013.html">Post-Conference Videos &amp; DVDs</a></li> 
+            <li><a href="../resources2014.html">Archives</a> 
+              
+            </li>
+            
+            <li><a href="../lt_overview2014.html">Lodging &amp; Transportation</a> 
+            </li>
+            <li><a href="../exhibitorpart2014.html">Exhibitors</a></li>
+            <li><a href="../pricing2014.html">Fees</a></li>
+            <li><a href="../registration2014.html">Registration</a></li>
+		        
+          </ul>
+          
+        </div>
+       
+	   
+        <div id="twocols">
+        <h1 id="formstart">Presenter Proposal Form 2014</h1>
+       
+ 
+<div id="simplifyprop">
+<h2>Simplify the submission process</h2>
+ <a href="../propinfo2014.html">Preview Information needed for proposal</a> <span>and/or</span><span class="moverightless"><a href="../propinfo2014.html">Prepare your proposal in Word - then paste into form</a></span></div>
+
+<form action="/wp/saveprop2014.php" method="post" id="proposal2014">
+
+<div id="formcol1">
+<fieldset>
+<legend>1st Speaker*</legend>
+
+<ul>
+	<li>
+	<label for="fstspkr1">First Name <abbr class="req" title="required">*</abbr>:</label>
+	<input id="fstspkr1" name="fstspkr1"  type="text" class="reqfield" title="First Name1. This is a required field" /></li>
+
+
+<li>
+	<label for="lstname1" id="LastName1-ariaLabel">Last Name <abbr class="req" title="required">*</abbr>:</label>
+	<input id="lstname1" name="lstname1"  type="text" class="reqfield" title="Last Name1. This is a required field" />
+</li>
+<li>
+	<label for="spkrtitle1">Spkr Title:</label>
+	<input id="spkrtitle1" name="spkrtitle1" type="text" maxlength="48" />
+</li>
+<li>
+	<label for="company1">Company <abbr class="req" title="required">*</abbr>:</label>
+	<input id="company1" class="reqfield" name="company1" type="text" />
+</li>
+<li>
+	<label for="department1">Department:</label>
+	<input id="department1" name="department1" type="text"  />
+</li>
+<li>
+	<label for="address1" >Address <abbr class="req" title="required">*</abbr>:</label>
+	<input id="address1" class="reqfield" name="address1" type="text"  />
+</li>
+<li>
+	<label for="city1" >City <abbr class="req" title="required">*</abbr>:</label>
+	<input id="city1" class="reqfield" name="city1" type="text"  />
+</li>
+<li>
+	<label for="state1" >State/Province <abbr class="req" title="required">*</abbr>:</label>
+	<input id="state1" name="state1" class="reqfield" type="text"   />
+</li>
+<li>
+	<label for="country1" >Country <abbr class="req" title="required">*</abbr>:</label>	
+    <select id="country1" name="country1" class="reqfield"  >
+    <option value="US">United States</option>
+    <option value="AF">Afghanistan</option>
+    <option value="AX">Åland Islands</option>
+    <option value="AL">Albania</option>
+    <option value="DZ">Algeria</option>
+    <option value="AS">American Samoa</option>
+    <option value="AD">Andorra</option>
+    <option value="AO">Angola</option>
+    <option value="AI">Anguilla</option>
+    <option value="AQ">Antarctica</option>
+    <option value="AG">Antigua and Barbuda</option>
+    <option value="AR">Argentina</option>
+    <option value="AM">Armenia</option>
+    <option value="AW">Aruba</option>
+    <option value="AU">Australia</option>
+    <option value="AT">Austria</option>
+    <option value="AZ">Azerbaijan</option>
+    <option value="BS">Bahamas</option>
+    <option value="BH">Bahrain</option>
+    <option value="BD">Bangladesh</option>
+    <option value="BB">Barbados</option>
+    <option value="BY">Belarus</option>
+    <option value="BE">Belgium</option>
+    <option value="BZ">Belize</option>
+    <option value="BJ">Benin</option>
+    <option value="BM">Bermuda</option>
+    <option value="BT">Bhutan</option>
+    <option value="BO">Bolivia</option>
+    <option value="BA">Bosnia and Herzegovina</option>
+    <option value="BW">Botswana</option>
+    <option value="BV">Bouvet Island</option>
+    <option value="BR">Brazil</option>
+    <option value="IO">British Indian Ocean Territory</option>
+    <option value="BN">Brunei Darussalam</option>
+    <option value="BG">Bulgaria</option>
+    <option value="BF">Burkina Faso</option>
+    <option value="BI">Burundi</option>
+    <option value="KH">Cambodia</option>
+    <option value="CM">Cameroon</option>
+    <option value="CA">Canada</option>
+    <option value="CV">Cape Verde</option>
+    <option value="KY">Cayman Islands</option>
+    <option value="CF">Central African Republic</option>
+    <option value="TD">Chad</option>
+    <option value="CL">Chile</option>
+    <option value="CN">China</option>
+    <option value="CX">Christmas Island</option>
+    <option value="CC">Cocos (Keeling) Islands</option>
+    <option value="CO">Colombia</option>
+    <option value="KM">Comoros</option>
+    <option value="CG">Congo</option>
+    <option value="CD">Congo, The Democratic Republic of The</option>
+    <option value="CK">Cook Islands</option>
+    <option value="CR">Costa Rica</option>
+    <option value="CI">Cote D'ivoire</option>
+    <option value="HR">Croatia</option>
+    <option value="CU">Cuba</option>
+    <option value="CY">Cyprus</option>
+    <option value="CZ">Czech Republic</option>
+    <option value="DK">Denmark</option>
+    <option value="DJ">Djibouti</option>
+    <option value="DM">Dominica</option>
+    <option value="DO">Dominican Republic</option>
+    <option value="EC">Ecuador</option>
+    <option value="EG">Egypt</option>
+    <option value="SV">El Salvador</option>
+    <option value="GQ">Equatorial Guinea</option>
+    <option value="ER">Eritrea</option>
+    <option value="EE">Estonia</option>
+    <option value="ET">Ethiopia</option>
+    <option value="FK">Falkland Islands (Malvinas)</option>
+    <option value="FO">Faroe Islands</option>
+    <option value="FJ">Fiji</option>
+    <option value="FI">Finland</option>
+    <option value="FR">France</option>
+    <option value="GF">French Guiana</option>
+    <option value="PF">French Polynesia</option>
+    <option value="TF">French Southern Territories</option>
+    <option value="GA">Gabon</option>
+    <option value="GM">Gambia</option>
+    <option value="GE">Georgia</option>
+    <option value="DE">Germany</option>
+    <option value="GH">Ghana</option>
+    <option value="GI">Gibraltar</option>
+    <option value="GR">Greece</option>
+    <option value="GL">Greenland</option>
+    <option value="GD">Grenada</option>
+    <option value="GP">Guadeloupe</option>
+    <option value="GU">Guam</option>
+    <option value="GT">Guatemala</option>
+    <option value="GG">Guernsey</option>
+    <option value="GN">Guinea</option>
+    <option value="GW">Guinea-bissau</option>
+    <option value="GY">Guyana</option>
+    <option value="HT">Haiti</option>
+    <option value="HM">Heard Island and Mcdonald Islands</option>
+    <option value="VA">Holy See (Vatican City State)</option>
+    <option value="HN">Honduras</option>
+    <option value="HK">Hong Kong</option>
+    <option value="HU">Hungary</option>
+    <option value="IS">Iceland</option>
+    <option value="IN">India</option>
+    <option value="ID">Indonesia</option>
+    <option value="IR">Iran, Islamic Republic of</option>
+    <option value="IQ">Iraq</option>
+    <option value="IE">Ireland</option>
+    <option value="IM">Isle of Man</option>
+    <option value="IL">Israel</option>
+    <option value="IT">Italy</option>
+    <option value="JM">Jamaica</option>
+    <option value="JP">Japan</option>
+    <option value="JE">Jersey</option>
+    <option value="JO">Jordan</option>
+    <option value="KZ">Kazakhstan</option>
+    <option value="KE">Kenya</option>
+    <option value="KI">Kiribati</option>
+    <option value="KP">Korea, Democratic People's Republic of</option>
+    <option value="KR">Korea, Republic of</option>
+    <option value="KW">Kuwait</option>
+    <option value="KG">Kyrgyzstan</option>
+    <option value="LA">Lao People's Democratic Republic</option>
+    <option value="LV">Latvia</option>
+    <option value="LB">Lebanon</option>
+    <option value="LS">Lesotho</option>
+    <option value="LR">Liberia</option>
+    <option value="LY">Libyan Arab Jamahiriya</option>
+    <option value="LI">Liechtenstein</option>
+    <option value="LT">Lithuania</option>
+    <option value="LU">Luxembourg</option>
+    <option value="MO">Macao</option>
+    <option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+    <option value="MG">Madagascar</option>
+    <option value="MW">Malawi</option>
+    <option value="MY">Malaysia</option>
+    <option value="MV">Maldives</option>
+    <option value="ML">Mali</option>
+    <option value="MT">Malta</option>
+    <option value="MH">Marshall Islands</option>
+    <option value="MQ">Martinique</option>
+    <option value="MR">Mauritania</option>
+    <option value="MU">Mauritius</option>
+    <option value="YT">Mayotte</option>
+    <option value="MX">Mexico</option>
+    <option value="FM">Micronesia, Federated States of</option>
+    <option value="MD">Moldova, Republic of</option>
+    <option value="MC">Monaco</option>
+    <option value="MN">Mongolia</option>
+    <option value="ME">Montenegro</option>
+    <option value="MS">Montserrat</option>
+    <option value="MA">Morocco</option>
+    <option value="MZ">Mozambique</option>
+    <option value="MM">Myanmar</option>
+    <option value="NA">Namibia</option>
+    <option value="NR">Nauru</option>
+    <option value="NP">Nepal</option>
+    <option value="NL">Netherlands</option>
+    <option value="AN">Netherlands Antilles</option>
+    <option value="NC">New Caledonia</option>
+    <option value="NZ">New Zealand</option>
+    <option value="NI">Nicaragua</option>
+    <option value="NE">Niger</option>
+    <option value="NG">Nigeria</option>
+    <option value="NU">Niue</option>
+    <option value="NF">Norfolk Island</option>
+    <option value="MP">Northern Mariana Islands</option>
+    <option value="NO">Norway</option>
+    <option value="OM">Oman</option>
+    <option value="PK">Pakistan</option>
+    <option value="PW">Palau</option>
+    <option value="PS">Palestinian Territory, Occupied</option>
+    <option value="PA">Panama</option>
+    <option value="PG">Papua New Guinea</option>
+    <option value="PY">Paraguay</option>
+    <option value="PE">Peru</option>
+    <option value="PH">Philippines</option>
+    <option value="PN">Pitcairn</option>
+    <option value="PL">Poland</option>
+    <option value="PT">Portugal</option>
+    <option value="PR">Puerto Rico</option>
+    <option value="QA">Qatar</option>
+    <option value="RE">Reunion</option>
+    <option value="RO">Romania</option>
+    <option value="RU">Russian Federation</option>
+    <option value="RW">Rwanda</option>
+    <option value="SH">Saint Helena</option>
+    <option value="KN">Saint Kitts and Nevis</option>
+    <option value="LC">Saint Lucia</option>
+    <option value="PM">Saint Pierre and Miquelon</option>
+    <option value="VC">Saint Vincent and The Grenadines</option>
+    <option value="WS">Samoa</option>
+    <option value="SM">San Marino</option>
+    <option value="ST">Sao Tome and Principe</option>
+    <option value="SA">Saudi Arabia</option>
+    <option value="SN">Senegal</option>
+    <option value="RS">Serbia</option>
+    <option value="SC">Seychelles</option>
+    <option value="SL">Sierra Leone</option>
+    <option value="SG">Singapore</option>
+    <option value="SK">Slovakia</option>
+    <option value="SI">Slovenia</option>
+    <option value="SB">Solomon Islands</option>
+    <option value="SO">Somalia</option>
+    <option value="ZA">South Africa</option>
+    <option value="GS">South Georgia and The South Sandwich Islands</option>
+    <option value="ES">Spain</option>
+    <option value="LK">Sri Lanka</option>
+    <option value="SD">Sudan</option>
+    <option value="SR">Suriname</option>
+    <option value="SJ">Svalbard and Jan Mayen</option>
+    <option value="SZ">Swaziland</option>
+    <option value="SE">Sweden</option>
+    <option value="CH">Switzerland</option>
+    <option value="SY">Syrian Arab Republic</option>
+    <option value="TW">Taiwan, Province of China</option>
+    <option value="TJ">Tajikistan</option>
+    <option value="TZ">Tanzania, United Republic of</option>
+    <option value="TH">Thailand</option>
+    <option value="TL">Timor-leste</option>
+    <option value="TG">Togo</option>
+    <option value="TK">Tokelau</option>
+    <option value="TO">Tonga</option>
+    <option value="TT">Trinidad and Tobago</option>
+    <option value="TN">Tunisia</option>
+    <option value="TR">Turkey</option>
+    <option value="TM">Turkmenistan</option>
+    <option value="TC">Turks and Caicos Islands</option>
+    <option value="TV">Tuvalu</option>
+    <option value="UG">Uganda</option>
+    <option value="UA">Ukraine</option>
+    <option value="AE">United Arab Emirates</option>
+    <option value="GB">United Kingdom</option>
+    <option value="UM">United States Minor Outlying Islands</option>
+    <option value="UY">Uruguay</option>
+    <option value="UZ">Uzbekistan</option>
+    <option value="VU">Vanuatu</option>
+    <option value="VE">Venezuela</option>
+    <option value="VN">Viet Nam</option>
+    <option value="VG">Virgin Islands, British</option>
+    <option value="VI">Virgin Islands, U.S.</option>
+    <option value="WF">Wallis and Futuna</option>
+    <option value="EH">Western Sahara</option>
+    <option value="YE">Yemen</option>
+    <option value="ZM">Zambia</option>
+    <option value="ZW">Zimbabwe</option>
+    </select>
+</li>
+<li>
+	<label for="zip1" >Zip/Postal Code <abbr class="req" title="required">*</abbr>:</label>
+	<input id="zip1" name="zip1" class="reqfield" type="text"  />
+</li>
+<li>
+	<label for="email1" >e-mail:</label>
+	<input id="email1" name="email1" type="text"  />
+</li>
+<li>
+<label for="telno1" >Phone Number <abbr class="req" title="required">*</abbr>:</label>
+	<input id="telno1" name="telno1" class="reqfield" type="text"  />
+</li>
+<li>
+ <label for="url1" >Url:</label>
+     <input id="url1" name="url1" type="text"  />
+</li>  
+</ul>
+</fieldset>
+<ul>
+<li>*(Note: The first speaker contact will receive all correspondance)</li>
+</ul>
+</div>
+
+ 
+
+<div id="formcol2">
+
+<!-- a11yAccordeon code goes here -->
+<ul class="a11yAccordeon" id="Accordeon1">
+  <li class="a11yAccordeonItem">
+    <div class="a11yAccordeonItemHeader">
+      <strong>Second Speaker Section</strong>
+    </div>
+    <div class="a11yAccordeonHideArea">
+
+   
+
+<fieldset>
+<legend id="secondspeak" aria-expanded="false">2nd Speaker</legend>
+<ul>
+<li>
+	<label for="secondspkr" >First Name:</label>
+	<input id="secondspkr" name="secondspkr" type="text"  />
+</li>
+<li>
+	<label for="lastname2" >Last Name:</label>
+	<input id="lastname2" name="lastname2" type="text" />
+</li>
+<li>
+	<label for="spkrtitle2" >Spkr Title:</label>
+	<input id="spkrtitle2" name="spkrtitle2" type="text" maxlength="48"  />
+</li>
+<li>
+	<label for="company2" >Company:</label>
+	<input id="company2" name="company2" type="text" />
+</li>
+<li>
+	<label for="department2" >Department:</label>
+	<input id="department2" name="department2" type="text" />
+</li>
+<li>
+	<label for="address2" >Address:</label>
+	<input id="address2" name="address2" type="text" />
+</li>
+<li>
+	<label for="city2" >City:</label>
+	<input id="city2" name="city2" type="text"  />
+</li>
+<li>
+	<label for="state2">State/Province:</label>
+	<input id="state2" name="state2" type="text" />
+</li>
+<li>
+	<label for="country2" >Country <abbr class="req" title="required">*</abbr>:</label>	
+    <select id="country2" name="country2"  >
+    <option value="US">United States</option>
+    <option value="AF">Afghanistan</option>
+    <option value="AX">Åland Islands</option>
+    <option value="AL">Albania</option>
+    <option value="DZ">Algeria</option>
+    <option value="AS">American Samoa</option>
+    <option value="AD">Andorra</option>
+    <option value="AO">Angola</option>
+    <option value="AI">Anguilla</option>
+    <option value="AQ">Antarctica</option>
+    <option value="AG">Antigua and Barbuda</option>
+    <option value="AR">Argentina</option>
+    <option value="AM">Armenia</option>
+    <option value="AW">Aruba</option>
+    <option value="AU">Australia</option>
+    <option value="AT">Austria</option>
+    <option value="AZ">Azerbaijan</option>
+    <option value="BS">Bahamas</option>
+    <option value="BH">Bahrain</option>
+    <option value="BD">Bangladesh</option>
+    <option value="BB">Barbados</option>
+    <option value="BY">Belarus</option>
+    <option value="BE">Belgium</option>
+    <option value="BZ">Belize</option>
+    <option value="BJ">Benin</option>
+    <option value="BM">Bermuda</option>
+    <option value="BT">Bhutan</option>
+    <option value="BO">Bolivia</option>
+    <option value="BA">Bosnia and Herzegovina</option>
+    <option value="BW">Botswana</option>
+    <option value="BV">Bouvet Island</option>
+    <option value="BR">Brazil</option>
+    <option value="IO">British Indian Ocean Territory</option>
+    <option value="BN">Brunei Darussalam</option>
+    <option value="BG">Bulgaria</option>
+    <option value="BF">Burkina Faso</option>
+    <option value="BI">Burundi</option>
+    <option value="KH">Cambodia</option>
+    <option value="CM">Cameroon</option>
+    <option value="CA">Canada</option>
+    <option value="CV">Cape Verde</option>
+    <option value="KY">Cayman Islands</option>
+    <option value="CF">Central African Republic</option>
+    <option value="TD">Chad</option>
+    <option value="CL">Chile</option>
+    <option value="CN">China</option>
+    <option value="CX">Christmas Island</option>
+    <option value="CC">Cocos (Keeling) Islands</option>
+    <option value="CO">Colombia</option>
+    <option value="KM">Comoros</option>
+    <option value="CG">Congo</option>
+    <option value="CD">Congo, The Democratic Republic of The</option>
+    <option value="CK">Cook Islands</option>
+    <option value="CR">Costa Rica</option>
+    <option value="CI">Cote D'ivoire</option>
+    <option value="HR">Croatia</option>
+    <option value="CU">Cuba</option>
+    <option value="CY">Cyprus</option>
+    <option value="CZ">Czech Republic</option>
+    <option value="DK">Denmark</option>
+    <option value="DJ">Djibouti</option>
+    <option value="DM">Dominica</option>
+    <option value="DO">Dominican Republic</option>
+    <option value="EC">Ecuador</option>
+    <option value="EG">Egypt</option>
+    <option value="SV">El Salvador</option>
+    <option value="GQ">Equatorial Guinea</option>
+    <option value="ER">Eritrea</option>
+    <option value="EE">Estonia</option>
+    <option value="ET">Ethiopia</option>
+    <option value="FK">Falkland Islands (Malvinas)</option>
+    <option value="FO">Faroe Islands</option>
+    <option value="FJ">Fiji</option>
+    <option value="FI">Finland</option>
+    <option value="FR">France</option>
+    <option value="GF">French Guiana</option>
+    <option value="PF">French Polynesia</option>
+    <option value="TF">French Southern Territories</option>
+    <option value="GA">Gabon</option>
+    <option value="GM">Gambia</option>
+    <option value="GE">Georgia</option>
+    <option value="DE">Germany</option>
+    <option value="GH">Ghana</option>
+    <option value="GI">Gibraltar</option>
+    <option value="GR">Greece</option>
+    <option value="GL">Greenland</option>
+    <option value="GD">Grenada</option>
+    <option value="GP">Guadeloupe</option>
+    <option value="GU">Guam</option>
+    <option value="GT">Guatemala</option>
+    <option value="GG">Guernsey</option>
+    <option value="GN">Guinea</option>
+    <option value="GW">Guinea-bissau</option>
+    <option value="GY">Guyana</option>
+    <option value="HT">Haiti</option>
+    <option value="HM">Heard Island and Mcdonald Islands</option>
+    <option value="VA">Holy See (Vatican City State)</option>
+    <option value="HN">Honduras</option>
+    <option value="HK">Hong Kong</option>
+    <option value="HU">Hungary</option>
+    <option value="IS">Iceland</option>
+    <option value="IN">India</option>
+    <option value="ID">Indonesia</option>
+    <option value="IR">Iran, Islamic Republic of</option>
+    <option value="IQ">Iraq</option>
+    <option value="IE">Ireland</option>
+    <option value="IM">Isle of Man</option>
+    <option value="IL">Israel</option>
+    <option value="IT">Italy</option>
+    <option value="JM">Jamaica</option>
+    <option value="JP">Japan</option>
+    <option value="JE">Jersey</option>
+    <option value="JO">Jordan</option>
+    <option value="KZ">Kazakhstan</option>
+    <option value="KE">Kenya</option>
+    <option value="KI">Kiribati</option>
+    <option value="KP">Korea, Democratic People's Republic of</option>
+    <option value="KR">Korea, Republic of</option>
+    <option value="KW">Kuwait</option>
+    <option value="KG">Kyrgyzstan</option>
+    <option value="LA">Lao People's Democratic Republic</option>
+    <option value="LV">Latvia</option>
+    <option value="LB">Lebanon</option>
+    <option value="LS">Lesotho</option>
+    <option value="LR">Liberia</option>
+    <option value="LY">Libyan Arab Jamahiriya</option>
+    <option value="LI">Liechtenstein</option>
+    <option value="LT">Lithuania</option>
+    <option value="LU">Luxembourg</option>
+    <option value="MO">Macao</option>
+    <option value="MK">Macedonia, The Former Yugoslav Republic of</option>
+    <option value="MG">Madagascar</option>
+    <option value="MW">Malawi</option>
+    <option value="MY">Malaysia</option>
+    <option value="MV">Maldives</option>
+    <option value="ML">Mali</option>
+    <option value="MT">Malta</option>
+    <option value="MH">Marshall Islands</option>
+    <option value="MQ">Martinique</option>
+    <option value="MR">Mauritania</option>
+    <option value="MU">Mauritius</option>
+    <option value="YT">Mayotte</option>
+    <option value="MX">Mexico</option>
+    <option value="FM">Micronesia, Federated States of</option>
+    <option value="MD">Moldova, Republic of</option>
+    <option value="MC">Monaco</option>
+    <option value="MN">Mongolia</option>
+    <option value="ME">Montenegro</option>
+    <option value="MS">Montserrat</option>
+    <option value="MA">Morocco</option>
+    <option value="MZ">Mozambique</option>
+    <option value="MM">Myanmar</option>
+    <option value="NA">Namibia</option>
+    <option value="NR">Nauru</option>
+    <option value="NP">Nepal</option>
+    <option value="NL">Netherlands</option>
+    <option value="AN">Netherlands Antilles</option>
+    <option value="NC">New Caledonia</option>
+    <option value="NZ">New Zealand</option>
+    <option value="NI">Nicaragua</option>
+    <option value="NE">Niger</option>
+    <option value="NG">Nigeria</option>
+    <option value="NU">Niue</option>
+    <option value="NF">Norfolk Island</option>
+    <option value="MP">Northern Mariana Islands</option>
+    <option value="NO">Norway</option>
+    <option value="OM">Oman</option>
+    <option value="PK">Pakistan</option>
+    <option value="PW">Palau</option>
+    <option value="PS">Palestinian Territory, Occupied</option>
+    <option value="PA">Panama</option>
+    <option value="PG">Papua New Guinea</option>
+    <option value="PY">Paraguay</option>
+    <option value="PE">Peru</option>
+    <option value="PH">Philippines</option>
+    <option value="PN">Pitcairn</option>
+    <option value="PL">Poland</option>
+    <option value="PT">Portugal</option>
+    <option value="PR">Puerto Rico</option>
+    <option value="QA">Qatar</option>
+    <option value="RE">Reunion</option>
+    <option value="RO">Romania</option>
+    <option value="RU">Russian Federation</option>
+    <option value="RW">Rwanda</option>
+    <option value="SH">Saint Helena</option>
+    <option value="KN">Saint Kitts and Nevis</option>
+    <option value="LC">Saint Lucia</option>
+    <option value="PM">Saint Pierre and Miquelon</option>
+    <option value="VC">Saint Vincent and The Grenadines</option>
+    <option value="WS">Samoa</option>
+    <option value="SM">San Marino</option>
+    <option value="ST">Sao Tome and Principe</option>
+    <option value="SA">Saudi Arabia</option>
+    <option value="SN">Senegal</option>
+    <option value="RS">Serbia</option>
+    <option value="SC">Seychelles</option>
+    <option value="SL">Sierra Leone</option>
+    <option value="SG">Singapore</option>
+    <option value="SK">Slovakia</option>
+    <option value="SI">Slovenia</option>
+    <option value="SB">Solomon Islands</option>
+    <option value="SO">Somalia</option>
+    <option value="ZA">South Africa</option>
+    <option value="GS">South Georgia and The South Sandwich Islands</option>
+    <option value="ES">Spain</option>
+    <option value="LK">Sri Lanka</option>
+    <option value="SD">Sudan</option>
+    <option value="SR">Suriname</option>
+    <option value="SJ">Svalbard and Jan Mayen</option>
+    <option value="SZ">Swaziland</option>
+    <option value="SE">Sweden</option>
+    <option value="CH">Switzerland</option>
+    <option value="SY">Syrian Arab Republic</option>
+    <option value="TW">Taiwan, Province of China</option>
+    <option value="TJ">Tajikistan</option>
+    <option value="TZ">Tanzania, United Republic of</option>
+    <option value="TH">Thailand</option>
+    <option value="TL">Timor-leste</option>
+    <option value="TG">Togo</option>
+    <option value="TK">Tokelau</option>
+    <option value="TO">Tonga</option>
+    <option value="TT">Trinidad and Tobago</option>
+    <option value="TN">Tunisia</option>
+    <option value="TR">Turkey</option>
+    <option value="TM">Turkmenistan</option>
+    <option value="TC">Turks and Caicos Islands</option>
+    <option value="TV">Tuvalu</option>
+    <option value="UG">Uganda</option>
+    <option value="UA">Ukraine</option>
+    <option value="AE">United Arab Emirates</option>
+    <option value="GB">United Kingdom</option>
+    <option value="UM">United States Minor Outlying Islands</option>
+    <option value="UY">Uruguay</option>
+    <option value="UZ">Uzbekistan</option>
+    <option value="VU">Vanuatu</option>
+    <option value="VE">Venezuela</option>
+    <option value="VN">Viet Nam</option>
+    <option value="VG">Virgin Islands, British</option>
+    <option value="VI">Virgin Islands, U.S.</option>
+    <option value="WF">Wallis and Futuna</option>
+    <option value="EH">Western Sahara</option>
+    <option value="YE">Yemen</option>
+    <option value="ZM">Zambia</option>
+    <option value="ZW">Zimbabwe</option>
+    </select>
+</li>
+<li>
+	<label for="zip2" >Zip/Postal Code:</label>
+	<input id="zip2" name="zip2" type="text" />
+</li>
+<li>
+	<label for="email2" >e-mail:</label>
+	<input id="email2" name="email2" type="text" />
+</li>
+<li>
+	<label for="telno2" >Phone Number:</label>
+	<input id="telno2" name="telno2" type="text" />
+</li>
+<li> 
+	 <label for="url2" >Url:</label>
+     <input id="url2" name="url2" type="text" />
+</li>
+</ul>
+</fieldset>
+
+<!-- closing div for a11yAccordeonHideArea goes here -->
+</div>
+
+</li>
+</ul>
+
+</div>
+
+
+<div id="bottomform">
+
+
+    <fieldset>
+    <legend><strong>*Title of Proposal</strong> (150 characters maximum - about 25 words)</legend>
+<ul class="moveleft">
+<li>
+	<label for="proptitle"><span class="offscreen2>">Proposal Title:</span></label>
+	<input id="proptitle" name="proptitle" class="reqfield" type="text" 
+    maxlength="150" size="80" />
+   
+</li>
+</ul>
+</fieldset>
+
+	<fieldset>
+		<legend><strong>*Length of Session</strong></legend>
+        <span><strong>General Conference:</strong></span>
+		<span><input value="1-hr" id="rad_1hour_3" name="los" class="reqfield" type="radio" /></span> <label for="rad_1hour_3" >1-hr <span class="offscreen2"> general conference</span></label>
+ 		<span><input value="2-hr" id="rad_1hour_4" name="los" class="reqfield" type="radio"  /> </span>
+        <label for="rad_1hour_4" >2-hr <span class="offscreen2">general conference</span></label>
+ 		
+        
+ 	    <span>| <strong>Pre-Conference:</strong></span>
+		
+		<span>
+		<input value="3-hr" id="rad_3-hrPre-Conference_5" name="los" type="radio" class="reqfield" /> 
+        <label for="rad_3-hrPre-Conference_5" >3-hr <span class="offscreen2">pre-conference</span></label></span>
+ 		<span><input value="5-6 hr" id="Pre-Conference_5-6hr" name="los" type="radio" class="reqfield"/> 
+        <label for="Pre-Conference_5-6hr" >5-6 hr <span class="offscreen2">pre-conference</span></label></span>
+    </fieldset>
+        
+	<fieldset>
+		<legend><strong>*Type of Presentation</strong></legend>
+		<span><input value="1" id="rad_TypeofPresentation_7" name="leclab" type="radio" class="reqfield" /> <label for="rad_TypeofPresentation_7" >Lecture</label></span>
+ 		<span><input value="2" id="rad_TypeofPresentation_8" name="leclab" type="radio" class="reqfield" /> <label for="rad_TypeofPresentation_8" >Lab</label></span>
+ 	</fieldset>
+<ul class="moveleft">
+<li>
+	<label for="PresentationSummary"><strong>*Presentation Summary</strong> (300 characters maximum - about 42 words)</label>
+	<textarea id="PresentationSummary" name="PresentationSummary" cols="80" rows="3" maxlength="350" class="reqfield"></textarea>
+</li>
+
+<li>
+	<label for="PresentationAbstract" ><strong>*Presentation Abstract</strong> (860 characters maximum - about 150 words) </label>
+	<textarea id="PresentationAbstract" name="PresentationAbstract" cols="80" rows="4" maxlength="860" class="reqfield"></textarea>
+
+</li>
+</ul>
+<fieldset>
+<legend><strong>*Enter 3 keypoints attendees will learn at your presentation</strong> (110 characters maximum for each)</legend>
+<ul>
+<li>
+	<label for="KeyPoint1" >Key Point 1 *:</label>
+	<input id="KeyPoint1" name="KeyPoint1" type="text" maxlength="110" size="60" class="reqfield"/>
+</li>
+<li>
+	<label for="KeyPoint2" >Key Point 2 *:</label>
+	<input id="KeyPoint2" name="KeyPoint2" type="text" maxlength="110" size="60" class="reqfield"/>
+</li>
+<li>
+	<label for="KeyPoint3" >Key Point 3 *:</label>
+	<input id="KeyPoint3" name="KeyPoint3" type="text" maxlength="110" size="60" class="reqfield" />
+</li>
+</ul>
+</fieldset>
+	<fieldset>
+		<legend><strong>*Expertise Level</strong></legend>
+		<span><input value="1" id="rad_ExpertiseLevel_9" name="ExpertiseLevel" type="radio" class="required" /> <label for="rad_ExpertiseLevel_9" >Beginner</label></span>
+ 		<span><input value="2" id="rad_ExpertiseLevel_10" name="ExpertiseLevel" type="radio" /> <label for="rad_ExpertiseLevel_10" >Intermediate</label></span>
+ 		<span><input value="3" id="rad_ExpertiseLevel_11" name="ExpertiseLevel" type="radio" /> <label for="rad_ExpertiseLevel_11" >Advanced</label></span>
+ 		<span><input value="4" id="rad_ExpertiseLevel_12" name="ExpertiseLevel" type="radio" /> <label for="rad_ExpertiseLevel_12" >All Levels</label></span>
+ 	</fieldset>
+
+
+	<fieldset>
+		<legend><strong>*Disability Areas</strong> (Check all that apply)</legend>
+		<span><input value="1" id="deafhoh" name="deafhoh" type="checkbox" /> <label for="deafhoh" >Deaf/HOH</label></span>
+ 		<span><input value="1" id="cog" name="cog" type="checkbox" /> <label for="cog" >Cognitive/Learning</label></span>
+ 		<span><input value="1" id="vision" name="vision" type="checkbox" /> <label for="vision" >Vision</label></span>
+ 		<span><input value="1" id="mobility" name="mobility" type="checkbox" /> <label for="mobility" >Mobility</label></span>
+ 		<span><input value="1" id="disother" name="disother" type="checkbox" /> <label for="disother" >Other</label></span>
+ <ul>	
+ <li class="newline">   
+    <label for="disother_text" >If other, specify:</label>
+	<input id="disother_text" name="disothertext" type="text"  />
+  </li>   
+  </ul>
+</fieldset>
+
+	<fieldset>
+		<legend><strong>*Topic Areas</strong> (Check all that apply)</legend>
+		
+ 		<span><input value="1" id="web" name="web" type="checkbox" /> <label for="web" >Web or Media Access</label></span>
+ 		<span><input value="1" id="alternate" name="alternate" type="checkbox" /> <label for="alternate" id="Altformat-ariaLabel">Alternate Format</label></span>
+ 		<span><input value="1" id="campus" name="campus" type="checkbox" /> <label for="campus" >Campus Policy</label></span>
+ 		<input value="1" id="assistive" name="assistive" type="checkbox" /> <label for="assistive" >Assistive Technology</label>
+     <ul>   
+      <li class="newline">  
+ 		<span><input value="1" id="infores" name="infores" type="checkbox" /> <label for="infores" >Information Resources</label></span>
+        
+ 		<span><input value="1" id="curriculum" name="curriculum" type="checkbox" /> <label for="curriculum" >Curriculum Access</label></span>
+ 		<span><input value="1" id="best" name="best" type="checkbox" /> <label for="best" >Best Practices</label></span>
+        <span><input value="1" id="legal" name="legal" type="checkbox" /> <label for="legal" >Legal</label></span>
+        </li>
+        </ul>
+ 	</fieldset>
+
+
+	<fieldset>
+		<legend>A/V  &amp; Computer <strong>Equipment Needed for Presentation</strong>*</legend>
+		<span>
+		<input value="1" id="TVDVDplayer" name="TVDVDplayer" type="checkbox" /> <label for="TVDVDplayer" >TV/DVD Player</label></span>
+ 		<span><input value="1" id="Wireless" name="Wireless" type="checkbox" /> <label for="Wireless" >Wireless Internet</label></span>
+ 		<span><input value="1" id="flip" name="flip" type="checkbox" /> <label for="flip" >Flip Chart</label></span>
+    <ul>
+      <li class="newline">
+ 		<span><input value="1" id="PC" name="PC" type="checkbox" /> <label for="PC" ">Windows PC (We encourage presenters to bring their own laptop)</label></span></li>
+   
+ </ul>
+  <p class="notsoclose2prevmf">*(A screen and lcd projector are provided in each room).</p>      
+ </fieldset>
+ 
+ <fieldset>
+   <legend><strong>For hands-on workshops only: equipment, software and setup required</strong>*</legend>
+
+
+		<span><input value="1" id="supernova" name="supernova" type="checkbox" /> <label for="supernova" >SuperNova</label></span>
+ 		<span><input value="1" id="JAWS" name="JAWS" type="checkbox" /> <label for="JAWS" >JAWS</label></span>
+ 		<span><input value="1" id="WindowEyes" name="WindowEyes" type="checkbox" /> <label for="WindowEyes" >WindowEyes</label></span>
+ 		<span><input value="1" id="Magic" name="Magic" type="checkbox" /> <label for="Magic" >Magic</label></span>
+ 		<span><input value="1" id="Zoomtext" name="Zoomtext" type="checkbox" /> <label for="Zoomtext" >Zoomtext</label></span>
+ 		<span><input value="1" id="OtherSoftware" name="OtherSoftware" type="checkbox"  /> <label for="OtherSoftware" >Other software or equipment</label></span>
+<ul class="moveleft">
+<li>
+<span><label for="txt_other_software" >If other, specify:</label>
+	<input id="txt_other_software" name="text_other_software" type="text" maxlength="70"  size="70" /></span></li>
+ </ul>
+ <p class="close2prevmf">*(all lab PCs have an Internet connection, Firefox, Office & Internet Explorer)</p>
+ 	
+<ul class="moveleft">
+<li>
+	<span>
+	<label for="txt_MaximumClassSize" >Maximum class size:</label>
+	<input id="txt_MaximumClassSize" name="MaximumClassSize" size="2" type="text" /></span>
+
+   <li>	
+    <label for="txt_AddProctors" >Number of additional proctors needed (from conference staff):</label>
+    
+	<input id="txt_AddProctors" name="AddProctors" type="text" size="2" />
+</li>
+</ul>
+</fieldset>
+
+<fieldset>
+<legend>If you have not presented at AHG previously, please list some conferences that you have presented at in the last year or two.</legend>
+<table width="72%" border="1" cellspacing="1" cellpadding="1" summary="List of past presentations">
+  <caption>
+    Past Presentations
+  </caption>
+  <tr>
+    <th width="23%" scope="col">Date</th>
+    <th width="31%" scope="col">Conference</th>
+    <th width="46%">Title or topic of presentation</th>
+  </tr>
+  <tr>
+    <td><label for="txt_PrevDate1"><span class="offscreen2">date of conference 1</span></label>
+    <input id="txt_PrevDate1" name="PrevDate1" type="text" maxlength="10" /></td>
+    <td><label for="txt_PrevConf1"><span class="offscreen2">name of conference  1</span></label>
+    <input id="txt_PrevConf1" name="PrevConf1" type="text" maxlength="50" /></td>
+    <td><label for="txt_PrevTitle1"><span class="offscreen2">Title of presentation  1</span></label>
+	<input id="txt_PrevTitle1" name="PrevTitle1" type="text" size="40" maxlength="50" /></td>
+  </tr>
+  <tr>
+      <td><label for="txt_PrevDate2"><span class="offscreen2">date of conference  2</span></label>
+      <input id="txt_PrevDate2" name="PrevDate2" type="text" maxlength="10" /></td>
+    <td><label for="txt_PrevConf2"><span class="offscreen2">name of conference  2</span></label>
+    <input id="txt_PrevConf2" name="PrevConf2" type="text" maxlength="50" /></td>
+    <td><label for="txt_PrevTitle2"><span class="offscreen2">Title of presentation  2</span></label>
+	<input id="txt_PrevTitle2" name="PrevTitle2" type="text" size="40" maxlength="50" /></td>
+  </tr>
+  <tr>
+     <td><label for="txt_PrevDate3"><span class="offscreen2">date of conference  3</span></label>
+     <input id="txt_PrevDate3" name="PrevDate3" type="text" maxlength="10" /></td>
+    <td><label for="txt_PrevConf3"><span class="offscreen2">name of conference  3</span></label>
+    <input id="txt_PrevConf3" name="PrevConf3" type="text" maxlength="50" /></td>
+    <td><label for="txt_PrevTitle3"><span class="offscreen2">Title of presentation  3</span></label>
+	<input id="txt_PrevTitle3" name="PrevTitle3" type="text" size="40" maxlength="50" /></td>
+  </tr>
+</table>
+</fieldset>
+	
+
+<ul class="moveleft">
+<li>
+	<label for="txtarea_Speaker1bio" ><strong>Speaker 1 bio</strong> (1000 characters maximum)</label>
+	<textarea id="txtarea_Speaker1bio" name="Speaker1bio" cols="80" rows="4" ></textarea>
+</li>
+<li>
+	<label for="txtarea_Speaker2bio" ><strong>Speaker 2 bio</strong> (1000 characters maximum)</label>
+	<textarea id="txtarea_Speaker2bio" name="Speaker2bio" cols="80" rows="4" ></textarea>
+</li>
+</ul>
+
+<h2>Presentation Paper or Hand-Outs</h2>
+  <p>Please include a 2 to 5 page paper of your presentation in electronic format with your proposal. As an alternate to the paper, presenters can submit a PowerPoint outline (electronic version) of their presentation and/or other handouts, prior to the conference. If a paper is not submitted with this proposal, the speaker is committing to either the submission of a paper at a later date or electronic handouts to be sent by October 1, 2013.</p>
+  <h2>First Round of Submissions</h2>
+  <p>Please return this proposal form April 12 for the first round of submissions. Speakers will be notified by May 30 confirming acceptance or decline of their proposal(s).</p>
+  <h2>Second Round of Submissions</h2>
+  <p>If there are remaining presentation slots, a second round of proposals will be accepted up until May 12. Speakers will be notified by June 1 if there is a second round RFP.</p>
+  <p>Please note that due to a limited amount of time slots, some proposals may not be accepted. Proposals submitted during round one are given preferred consideration for speaker slots.</p>
+  <h2>Speaker Agreement</h2> <h3>Please note the following:</h3> 
+ <ol>
+ <li>
+  The proposal,  paper,  and any handouts speakers provide may appear on our website and other media as part of marketing for the conference. Conference handouts and links to presenter's e-mail addresses will also be posted on the post-conference website. Please submit an electronic copy of your handouts by October 1 either through e-mail: ahg@ahead.org or by mailing a CD or DVD to the address below.</li>
+  
+ <li> Handouts, including alternate formats (Braille, Large Print, Disk, posting on Web) are the responsibility of the presenter(s). The number of registered attendees requiring alternate formats will be sent to presenters by October 10th. Please let us know if you need assistance in providing your material in alternate format.</li>
+ <li>It is understood that permission has been given by program presenters for audio-taping, video-taping and photographs. Audio of the sessions may appear on the post-conference website. Tapes/videos/DVDs may also be made of the sessions and provided to attendees during the conference for a fee. Pending speaker consent, some conference sessions may be streamed to off-site audiences. Other video material may be used for fee-generating post-conference events. Speakers who consent to use of their material for fee-generating post-conference events will receive compensation in the form of access to our video library or other compensation to be determined.</li>
+ <li>A 10% discount on registration fees will be provided to presenters who are traveling to the conference from out-of-state. Local presenters who present for one session or more  receive a 5% discount off conference fees.</li>
+ <li>Pre-conference presenters who present 6 hours or more will receive additional discounts. Contact ahg@ahead.org or 303-492-8672 for specifics.</li>
+</ol>
+<h3>Please indicate your your acceptance of the above agreement by typing in your name below in lieu of signature:</h3>
+<ul>
+<li>
+	<label for="Speaker1sig" >Presenter 1: Type your name to indicate agreement with above stipulations</label>
+	<input type="text" id="Speaker1sig" name="Speaker1sig" size="40" />
+	</li>
+<li>
+	<label for="txt_Speaker2sig" >Presenter 2: Type your name to indicate agreement with above stipulations</label>
+	<input type="text" id="txt_Speaker2sig" name="Speaker2sig" size="40" />
+	</li>
+</ul>
+<ul>
+<li>
+  <fieldset>
+		<legend>Will you be sending your paper  in a subsequent e-mail to <a href="mailto:ahg@ahead.org">AHG Conference</a> after you submit this proposal?* </legend>
+        
+		<span>
+		<input value="1" id="rad_PaperInclude_yes" name="PaperInclude" type="radio" /> <label for="rad_PaperInclude_yes" >Yes</label></span>
+ 		<span><input value="0" id="rad_PaperInclude_no" name="PaperInclude" type="radio" /> <label for="rad_PaperInclude_no" >No</label></span>
+ 	</fieldset>
+    <p class="close2prevmf">*(Papers not sent with proposal must be submitted by Oct. 1)</p>
+</li>
+<li>
+	<fieldset>
+		<legend>Do you consent to the audio recording of your conference sessions according to the stipulations listed above.</legend>
+		<span><input value="1" id="rad_consentaudio_yes" name="consentaudio" type="radio" /> <label for="rad_consentaudio_yes" >Yes</label></span>
+ 		<span><input value="0" id="rad_consentaudio_no" name="consentaudio" type="radio"  /> <label for="rad_consentaudio_no" >No</label></span>
+ 	</fieldset>
+</li>
+<li>
+	<fieldset>
+		<legend>Do you consent to the video recording of your conference sessions according to the stipulations listed above.*</legend>
+		<span><input value="1" id="videorecord_yes" name="videorecord" type="radio" /> <label for="videorecord_yes" id="videorecord_yes-ariaLabel">Yes</label></span>
+ 		<span><input value="0" id="videorecord_no" name="videorecord" type="radio" /> <label for="videorecord_no" >No</label></span>
+ 	</fieldset>
+</li>
+<li>
+	<fieldset>
+		<legend>Do you consent to the video streaming of your conference sessions according to the stipulations listed above.*</legend>
+		<span><input value="1" id="rad_videostream_yes" name="videostream" type="radio" /> <label for="rad_videostream_yes" >Yes</label></span>
+ 		<span><input value="0" id="rad_videostream_no" name="videostream" type="radio" /><label for="rad_videostream_no" >No</label></span>
+ </fieldset>	
+ <p class="close2prevmf">*(Consent for taping and streaming are not required for proposal acceptance)</p>
+</li>
+</ul>    
+    
+  
+	<input type="submit" value="Submit your proposal" />
+ </div>
+</form>
+</div>
+</div>
+</div>
+
+
+      
+        <div id="cleardiv"></div>
+      
+    
+    <div id="footer"> 
+      <ul>
+       <li><a href="http://www.ahead.org"><img src="http://accessinghigherground.org/images/AHEADlogo_forweb.jpg" alt="AHEAD logo, go to AHEAD Home page" width="297" height="58" /></a></li>
+<!--   <li><a href="http://www.colorado.edu/ATconference/sitemap2010.html">Site Map</A></li> -->
+<li><a href="../about2013.html#contactus">Contact Us</a></li>
+<li class="c2"><br />
+AHEAD<br />107 Commerce Center Drive, Suite 204<br />
+Huntersville,&nbsp;NC&nbsp;28078&nbsp;USA</li> 
+      </ul>
+     </div> 
+    </div>
+    </div>
+
+  
+
+</body>
+</html>

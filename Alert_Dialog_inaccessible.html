@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://webdevgroupcu.org/atlas3519/wai-aria/Alert_Dialog_inaccessible.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+          
+
+          <title>Alert Dialog</title>
+          
+
+          <style type="text/css">
+
+              #b { 
+                   background: #ECE9D8; 
+                   color: #000000; 
+                   padding: 1em; 
+                   border:3px inset black;
+                   width: 25em;
+                   height:11em;
+              }
+
+              #a {
+                   position: fixed;
+                   top:50px;
+                   left:110px;
+              }
+          
+              #StayButton {
+                   display:block;
+                   margin:7px;
+                   padding:2px;
+                   border:2px outset white;
+                   float:left;
+                   font-size:medium;
+              }
+
+              #GoogleLink {
+                   display:block;
+                   margin:7px;
+                   padding:2px;
+                   border:2px outset white;
+                   float:left; 
+                   text-decoration: none;
+                   font-size:medium; 
+              }
+
+          </style>
+
+
+          <script type="text/javascript">
+
+              function show() {
+                  disableButtons();
+                  window.myparent.appendChild(window.myobj);
+                  document.getElementById("StayButton").focus();
+                  document.body.style.backgroundColor = "rgb(40, 40, 40)";
+                 
+              }
+
+              function hide() {
+                  enableButtons();
+                  window.myparent = document.getElementById("a");
+                  window.myobj = document.getElementById("b");
+                  window.myparent.removeChild(window.myobj);
+                  document.getElementById("ShowButton").focus();
+                  document.body.style.backgroundColor = "rgb(255, 255, 255)";
+              }
+
+
+              function disableButtons() {
+                  var myB = document.getElementsByTagName("button");
+                  for (var i=0; i<myB.length; i++) {
+                      if (myB[i].id != 'CloseLink') {
+                          myB[i].disabled="disabled";
+                          
+                      }
+                  }
+                  document.body.style.backgroundColor='#FFFFFF';
+              }
+
+              function enableButtons() {
+                  var myB = document.getElementsByTagName("button");
+                  for (var i=0; i<myB.length; i++) {
+                      myB[i].disabled="";
+                      
+                  }
+                  document.body.style.backgroundColor='#FFFFFF';
+              }
+
+          </script>
+
+     </head>
+
+
+     <body onload="hide();" style="background-color: rgb(255, 255, 255);">
+
+          <h1>ARIA Alertdialogs!</h1>
+
+              <button onclick="show();" id="ShowButton">
+                  Show Alert Dialog.
+              </button> 
+
+
+              <div id="a">
+                    <div id="b" role="alertdialog" aria-labelledby="mymessage">
+                      <h2 id="mymessage">Do you want to stay on this page or do you want to visit Google?</h2>
+                      <button onclick="hide();" id="StayButton">Stay on this Page</button> 
+                      <a href="http://www.google.com" id="GoogleLink">Go to Google</a>
+                    </div>
+
+              </div>
+
+              <h2>Additional Content</h2>
+              <p>There might be additional content on a page like this including <button>additional buttons</button>.</p>
+
+     
+
+
+</body><autoscroll></autoscroll></html>

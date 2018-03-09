@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <title>ARIA Roles: Alert</title>   
+
+     <script language="JavaScript" type="text/javascript">
+
+         function show_new_object() {
+
+             // create a paragraph to be the alert message
+             var myAlert = document.createElement("p");
+             myAlert.setAttribute('id','mess2');
+             myAlert.setAttribute('role','alert');
+
+             // make it look nice
+             myAlert.style.color='#AF3D5C';
+             myAlert.style.fontWeight='bold';
+
+             // include some text
+             var msg = document.createTextNode("Please provide a valid email address."); 
+             myAlert.appendChild(msg);
+
+             // place the alert on the page
+             window.myparent = document.getElementById("place4alert");
+             window.myparent.appendChild(myAlert);
+
+        }
+
+        function hide() {
+             if (document.getElementById("place4alert").childNodes.length!=0) {
+                  window.myparent = document.getElementById("place4alert");
+                  window.myobj = document.getElementById("mess2");
+                  window.myparent.removeChild(window.myobj);
+             }
+        }
+
+    </script>
+</head>
+
+
+<body><div class="content_indent">
+
+<h1><a href="http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/-/4/index.html#PG5" target="_blank">Guideline 5: Findable Added Content</a></h1>
+
+<h2>The following example explores the use of ARIA <code>role=alert</code>.</h2>
+
+<p>Based on WAI-ARIA, alerts are spoken by assistive technologies, and focus does not move.</p>
+<p>This form also uses <code>aria-required="true"</code>.</p>
+
+<div class="small_block">
+    <h3>Please complete the registration form.</h3>
+
+    <form method="post" name="myForm" action="#">
+        <fieldset>
+            <legend>Enter your contact details</legend>
+
+            <label for="name">Your name (optional):</label>
+            <input name="name" id="name"/><br/>
+
+            <label for="email">Email address (required):</label>
+            <input name="email" id="email" aria-required="true" onblur="show_new_object();" onfocus="hide();"/>
+            <div id="place4alert"></div><br/>
+
+        </fieldset>
+
+        <input type="submit" name="submit" value="Send message"/>
+        <input type="reset" name="reset" value="Reset form"/>
+    </form>
+</div>
+
+</div></body>
+</html>

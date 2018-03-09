@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0061)http://webdevgroupcu.org/atlas3519/wai-aria/Timer_Problem.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     
+     <title>Timer Experiment</title>
+     <link rel="StyleSheet" href="./Timer_problem_files/custom.css" type="text/css">
+
+     <script language="JavaScript" type="text/javascript">
+
+         var timeout;
+         var timeouttarget;       // st new for message when target time reached
+         var start_time;
+         var speed = 1000;       // Update time every 1000 milliseconds
+         var timer_started = false;  // Used for grader and class manager message
+
+         
+         function startTimer() {
+
+             timer_started = true;  
+	       var today = new Date();
+	       start_time = today.getHours() * 3600 +
+		 today.getMinutes() * 60 + today.getSeconds();
+
+             // st add calculate timeout target value
+             timeouttarget = 20;
+
+	       // calculate timeout value
+	       timeout = 40;
+
+	       this.setTimeout('checkTimer()', speed);
+         }
+
+         function checkTimer() {
+
+	       var form = document.timerform;
+
+	       if (form != null) {		// is null in OG results page	
+		     var today = new Date();
+		     curr_time = today.getHours() * 3600 +
+		     today.getMinutes() * 60 + today.getSeconds();
+	           var time_diff = curr_time - start_time;
+	
+		 if (time_diff > timeouttarget) {
+			//document.getElementById('timerRecomTime').setAttribute('display','block');
+		 }
+	   
+	       if (time_diff > timeout) {
+		      //document.getElementById('timerMaxTime').setAttribute('display','block');
+		 }
+	   
+		 // calculate timer string
+		 var timer_sec = time_diff % 60;
+		 time_diff = (time_diff - timer_sec) / 60;
+		 var timer_min = time_diff % 60;
+		 var timer_hour = (time_diff - timer_min) / 60;
+	
+		 var timer_str;
+		 if(timer_hour < 10) {
+			timer_str = '0';
+		 }
+		 timer_str += timer_hour + ':';
+	
+		 if(timer_min < 10) {
+			timer_str += '0';
+		 }
+
+    		 timer_str += timer_min + ':';
+	
+		 if(timer_sec < 10) {
+			timer_str += '0';
+		 }
+
+   		 timer_str += timer_sec;
+	
+		 form.show_timer.value = timer_str;
+	
+		 var quiz_timer_str;
+		 if (timer_hour == 1) {
+			quiz_timer_str = '1 hour, ';
+		 } else if(timer_hour > 1) {
+			quiz_timer_str = timer_hour + ' hours, ';
+		 } else {
+			quiz_timer_str = '';
+	       }
+
+  	       if(timer_min == 0 && timer_hour == 0) {
+			quiz_timer_str = 'Less than 1 minute';
+		 } else if(timer_min == 1) {
+			quiz_timer_str += '1 minute';
+		 } else {
+			quiz_timer_str += timer_min + ' minutes';
+	       }
+
+		 this.setTimeout('checkTimer()', speed);
+	}
+}
+
+    </script>
+</head>
+
+
+<body><div class="content_indent">
+
+<h1><a href="http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/-/8/index.html#PG11" target="_blank">Guideline 11: Semantic Markup</a></h1>
+
+<h2>The following example explores why screen reader testing is very important when using WAI-ARIA.</h2>
+
+<p>This is an example where use of WAI-ARIA causes a problem.</p>
+
+<div class="small_block">
+
+    <h3>Timer</h3>
+
+    <form name="timerform">
+
+         <input type="text" name="show_timer" id="timer" title="Time spent as hours : minutes : seconds" value="00:00:00" size="8" aria-live="off">
+
+    </form>    
+
+    <a href="javascript:startTimer();">Start Timer</a>
+
+</div>
+
+</div>
+
+</body><autoscroll></autoscroll></html>
